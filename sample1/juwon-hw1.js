@@ -1,8 +1,5 @@
 function setup() {
-  const container = document.getElementById('canvas-root');
-  const w = container.offsetWidth;
-  const h = container.offsetHeight;
-  const canvas = createCanvas(w, h);
+  const canvas = createCanvas(600, 400);
   canvas.parent('canvas-root');
   noLoop();
 }
