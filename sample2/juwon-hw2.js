@@ -1,6 +1,12 @@
 function setup() {
-  const canvas = createCanvas(600, 400);
+  const container = document.getElementById('canvas-root');
+  const canvas = createCanvas(container.clientWidth, container.clientHeight);
   canvas.parent('canvas-root');
+}
+
+function windowResized() {
+  const container = document.getElementById('canvas-root');
+  resizeCanvas(container.clientWidth, container.clientHeight);
 }
 
 function draw() {
