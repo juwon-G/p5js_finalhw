@@ -1,5 +1,8 @@
 function setup() {
-  const canvas = createCanvas(600, 400);
+  const container = document.getElementById('canvas-root');
+  const w = container.offsetWidth;
+  const h = container.offsetHeight;
+  const canvas = createCanvas(w, h);
   canvas.parent('canvas-root');
   colorMode(HSB, 360, 100, 100, 100);
 }
