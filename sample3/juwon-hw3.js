@@ -21,6 +21,40 @@ function setup() {
   const h = container.offsetHeight;
   const canvas = createCanvas(w, h);
   canvas.parent('canvas-root');
+  
+  // Focus canvas for keyboard/mouse events
+  canvas.elt.focus();
+  canvas.elt.style.outline = 'none';
+  
+  // Bind window-level events to ensure they reach the sketch
+  window.addEventListener('keydown', (e) => {
+    const key = e.key.toLowerCase();
+    if (key === 'q') leftBlink = 8;
+    if (key === 'e') rightBlink = 8;
+    if (key === 'g') saveGif("20213029_hw3", 10);
+    if (key === 'a') speedX = -3;
+    if (key === 'd') speedX = 3;
+    if (key === 'w') speedY = -3;
+    if (key === 's') speedY = 3;
+    if (key === 'i') skyY -= 10;
+    if (key === 'k') skyY += 10;
+    if (key === 'j') skyX -= 10;
+    if (key === 'l') skyX += 10;
+  });
+  
+  window.addEventListener('keyup', (e) => {
+    const key = e.key.toLowerCase();
+    if (key === 'q') leftBlink = 0;
+    if (key === 'e') rightBlink = 0;
+  });
+  
+  window.addEventListener('mousedown', () => {
+    sad = true;
+  });
+  
+  window.addEventListener('mouseup', () => {
+    sad = false;
+  });
 }
 
 function draw() {
