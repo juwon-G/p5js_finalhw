@@ -17,9 +17,10 @@ body {
   justify-content: center;
   align-items: center;
   padding: 24px;
-  background: radial-gradient(circle at top left, #6d5a9c 0%, transparent 32%),
-              radial-gradient(circle at bottom right, #f38fa6 0%, transparent 28%),
-              linear-gradient(180deg, #1c1726 0%, #120f1d 100%);
+  background:
+    radial-gradient(circle at top left, #6d5a9c 0%, transparent 32%),
+    radial-gradient(circle at bottom right, #f38fa6 0%, transparent 28%),
+    linear-gradient(180deg, #1c1726 0%, #120f1d 100%);
 }
 
 .page-shell {
@@ -76,19 +77,22 @@ h1 {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 210, 150, 0.18), transparent 24%),
-              radial-gradient(circle at 80% 25%, rgba(178, 122, 235, 0.15), transparent 22%);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 210, 150, 0.18), transparent 24%),
+    radial-gradient(circle at 80% 25%, rgba(178, 122, 235, 0.15), transparent 22%);
   pointer-events: none;
 }
 
 .card--flower::before {
-  background: radial-gradient(circle at 18% 18%, rgba(255, 205, 125, 0.22), transparent 24%),
-              radial-gradient(circle at 80% 20%, rgba(116, 214, 255, 0.16), transparent 18%);
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 205, 125, 0.22), transparent 24%),
+    radial-gradient(circle at 80% 20%, rgba(116, 214, 255, 0.16), transparent 18%);
 }
 
 .card--portrait::before {
-  background: radial-gradient(circle at 15% 15%, rgba(204, 112, 255, 0.18), transparent 20%),
-              radial-gradient(circle at 78% 25%, rgba(255, 120, 170, 0.16), transparent 18%);
+  background:
+    radial-gradient(circle at 15% 15%, rgba(204, 112, 255, 0.18), transparent 20%),
+    radial-gradient(circle at 78% 25%, rgba(255, 120, 170, 0.16), transparent 18%);
 }
 
 .card-label {
@@ -101,17 +105,22 @@ h1 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 0.86rem;
+
+  pointer-events: none;
 }
 
 iframe {
   position: absolute;
   top: 50%;
   left: 50%;
+
   width: 1200px;
   height: 800px;
+
   transform: translate(-50%, -50%) scale(0.44);
   border: none;
-  pointer-events: none;
+
+  pointer-events: auto;
 }
 
 @media (max-width: 900px) {
