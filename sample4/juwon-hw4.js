@@ -1,13 +1,7 @@
 function setup() {
-  const container = document.getElementById('canvas-root');
-  const canvas = createCanvas(container.clientWidth, container.clientHeight);
+  const canvas = createCanvas(600, 400);
   canvas.parent('canvas-root');
   colorMode(HSB, 360, 100, 100, 100);
-}
-
-function windowResized() {
-  const container = document.getElementById('canvas-root');
-  resizeCanvas(container.clientWidth, container.clientHeight);
 }
 
 function draw() {
