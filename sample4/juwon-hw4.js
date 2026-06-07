@@ -1,5 +1,6 @@
 function setup() {
-  createCanvas(600, 400);
+  const canvas = createCanvas(600, 400);
+  canvas.parent('canvas-root');
   colorMode(HSB, 360, 100, 100, 100);
 }
 

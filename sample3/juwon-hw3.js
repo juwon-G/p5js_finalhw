@@ -16,7 +16,8 @@ let skyX = 500;
 let skyY = 80;
 
 function setup() {
-  createCanvas(600, 400);
+  const canvas = createCanvas(600, 400);
+  canvas.parent('canvas-root');
 }
 
 function draw() {

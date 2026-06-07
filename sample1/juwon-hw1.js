@@ -1,5 +1,6 @@
 function setup() {
-  createCanvas(600, 400);
+  const canvas = createCanvas(600, 400);
+  canvas.parent('canvas-root');
   noLoop();
 }
 
